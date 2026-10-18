@@ -1,0 +1,51 @@
+================================================================================
+AVE (AGENTIC VIDEO ENGINE) — AI AGENT INTERACTION & STORYBOARD CHEATSHEET
+================================================================================
+
+This document contains copy-paste prompts for directing AI coding agents 
+(Antigravity, Claude Code, Cursor, Copilot) when building videos with AVE.
+
+--------------------------------------------------------------------------------
+1. THE #1 GOLDEN RULE: GENERATE A CLAUDE STORYBOARD FIRST (A1 MANDATE)
+--------------------------------------------------------------------------------
+Before asking your AI agent to write any video code, paste this prompt into Claude:
+
+"I am editing a video with the AVE engine. Review my script below and generate a 
+frame-accurate video storyboard following the exact format of DEMO_STORYBOARD.md. 
+Include Scene IDs, exact frame ranges, visual action, on-screen text with 1 accent 
+word, voiceover lines, SFX cues, and transitions:
+
+[PASTE YOUR SCRIPT HERE]"
+
+If Claude gives you a vague or messy response, tell Claude:
+"Format it strictly as the table in DEMO_STORYBOARD.md with columns for Scene, 
+Time & Frames, Visual Frame & Action, On-Screen Kinetic Text, Voiceover Line, 
+SFX Cue, and Transition."
+
+--------------------------------------------------------------------------------
+2. DIRECTING YOUR AI CODING AGENT IN THIS REPOSITORY
+--------------------------------------------------------------------------------
+Once you have your storyboard and assets placed in public/inputs/, copy-paste 
+one of these prompts to your coding agent:
+
+PROMPT A: BUILD A REEL FROM STORYBOARD
+"I have placed my voiceover in public/inputs/voiceover.mp3. Here is my approved 
+storyboard from Claude (or see my storyboard.md). Please implement this composition 
+in src/compositions/MyNewReel.tsx using the AVE component library (WordLevelCaptions, 
+PipPresenter, KineticText, AudioController) and register it in Composition.tsx."
+
+PROMPT B: ADD KINETIC WORD CAPTIONS
+"Generate word-level captions for public/inputs/voiceover.mp3 using `npm run transcribe` 
+and mount WordLevelCaptions with white text and an amber accent on the punch words."
+
+PROMPT C: CREATE A 3D CUTAWAY SCENE
+"Use the medical-3d-anatomy skill to create a Three.js WebGL 3D visualization scene 
+at frame 180, and shrink the presenter into a smooth cosine-eased PiP corner bubble."
+
+--------------------------------------------------------------------------------
+3. AGENT MEMORY MANDATE
+--------------------------------------------------------------------------------
+Your AI agent must read and adhere to MEMORY.md at all times. Any newly agreed 
+rules, tokens, or workflow refinements must be proactively recorded into MEMORY.md 
+so you never have to repeat yourself.
+================================================================================

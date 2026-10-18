@@ -1,0 +1,45 @@
+{
+  "name": "ave-engine",
+  "version": "1.0.0",
+  "description": "AVE (Agentic Video Engine) — Short-form reel and keynote motion framework",
+  "private": true,
+  "dependencies": {
+    "@remotion/cli": "4.0.534",
+    "@remotion/google-fonts": "4.0.534",
+    "@remotion/lambda": "4.0.534",
+    "@remotion/media-utils": "4.0.534",
+    "@remotion/tailwind-v4": "4.0.534",
+    "@remotion/transitions": "4.0.534",
+    "@types/three": "^0.186.0",
+    "lucide-react": "^1.53.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.534",
+    "tailwindcss": "4.0.0",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.534",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "eslint": "9.39.5",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "^8.71.1"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "render": "remotion render ClaudeShowcase out/claude-showcase.mp4",
+    "render:vertical": "remotion render ClaudeShowcaseVertical out/claude-vertical.mp4",
+    "render:pro": "remotion render ProTalkingHeadReel out/pro-talking-head-reel.mp4 --concurrency=2",
+    "still": "remotion still ClaudeShowcase out/poster.png --frame=60",
+    "transcribe": "node scripts/transcribe_audio.mjs",
+    "pipeline:ai": "node scripts/ai_pipeline.mjs",
+    "clean": "node scripts/cleanup.mjs",
+    "lint": "tsc --noEmit"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
+}

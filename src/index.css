@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Montserrat:ital,wght@0,700;0,800;0,900;1,800&family=Outfit:wght@700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&family=Syne:wght@700;800;900&display=swap');
+
+:root {
+  --canvas-bg: #0A0B0E;
+  --surface-dark: #12131A;
+  --surface-card: #181924;
+  --terracotta: #CC785C;
+  --amber: #E07A5F;
+  --warm-glow: #F59E0B;
+  --iris: #818CF8;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--canvas-bg);
+  color: #F3F3EE;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-editorial {
+  font-family: 'Newsreader', Georgia, serif;
+}
+
+.font-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Glassmorphism Surface */
+.glass-panel {
+  background: rgba(24, 25, 36, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.glass-glow-terracotta {
+  box-shadow: 0 0 60px rgba(204, 120, 92, 0.15), 0 20px 40px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(204, 120, 92, 0.3);
+}
+
+/* Claude Gradient Text */
+.gradient-text-terracotta {
+  background: linear-gradient(135deg, #F3F3EE 30%, #CC785C 80%, #E07A5F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-amber {
+  background: linear-gradient(135deg, #FFF7ED 20%, #F59E0B 75%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
